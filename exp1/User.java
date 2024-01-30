@@ -84,28 +84,6 @@ class Address {
 	}
 }
 
-class Admin extends User {
-	private boolean isAdmin;
-
-	public Admin(String name, String password, String email, String phone, Address address, boolean isAdmin) {
-		super(name, password, email, phone, address);
-		this.isAdmin = isAdmin;
-	}
-
-	public boolean isAdmin() {
-		return isAdmin;
-	}
-
-	public void setAdmin(boolean isAdmin) {
-		this.isAdmin = isAdmin;
-	}
-
-	@Override
-	public String toString() {
-		return super.toString() + ", isAdmin=" + isAdmin;
-	}
-}
-
 class Customer extends User {
 	private String cardNumber;
 
