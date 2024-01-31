@@ -1,5 +1,9 @@
 // package exp1;
 
+enum CustomerType {
+	ORDINARY, VIP
+}
+
 class User {
 	private String name;
 	private String password;
@@ -90,6 +94,7 @@ class Address {
 
 class Customer extends User {
 	private String cardNumber;
+	private CustomerType type;
 
 	public Customer(String name, String password, String email, String phone, Address address, String cardNumber) {
 		super(name, password, email, phone, address);
@@ -98,6 +103,10 @@ class Customer extends User {
 
 	public String getCardNumber() {
 		return cardNumber;
+	}
+
+	public CustomerType getType() {
+		return type;
 	}
 
 	@Override
